@@ -1,0 +1,375 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+}
+
+/* ===== HEADER ===== */
+.header {
+  background: linear-gradient(to right, #3b5fc9, #4c6ef5);
+  color: white;
+  padding: 18px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.logout {
+  background: white;
+  color: #3b5fc9;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+
+/*  FILTER   */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.filter-left {
+  display: flex;
+  gap: 12px;
+}
+
+.filter-left input {
+  width: 220px;
+}
+
+.filter-left select {
+  width: 160px;
+}
+
+/* ===== INPUTS ===== */
+input, select {
+  padding: 10px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 14px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary {
+  background: #3b5fc9;
+  color: white;
+  font-weight: 500;
+}
+
+.primary:hover {
+  background: #324fc0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-bottom: 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/*  ATTACHMENTS  */
+.attachment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+/* TABLE BOX  */
+.table-box {
+  background: white;
+  border-radius: 10px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.table-box h3 {
+  padding: 15px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+/*  TABLE  */
+table {
+  width: 100%;
+  border-collapse: separate; /* IMPORTANT */
+  border-spacing: 0;
+}
+
+/* HEADER */
+thead th {
+  background: linear-gradient(to right, #3b5fc9, #4c6ef5);
+  color: white;
+  padding: 12px;
+  text-align: left;
+  font-weight: 500;
+  border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+thead th:last-child {
+  border-right: none;
+}
+
+/* BODY */
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #f1f1f1;
+}
+
+tbody td:last-child {
+  border-right: none;
+}
+
+/* ROW EFFECTS */
+tbody tr:hover {
+  background: #f6f8ff;
+}
+
+tbody tr:nth-child(even) {
+  background: #fafbff;
+}
+
+/* ===== PAGINATION ===== */
+.pagination {
+  text-align: center;
+  padding: 15px;
+}
+
+/*  LOGIN PAGE  */
+
+.login-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f8fa;
+  padding: 20px; 
+}
+
+.login-wrapper::before {
+  content: "Mini Lead Management System";
+  position: absolute;
+  top: 190px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #3b5fc9;
+}
+
+.login-card {
+  width: 360px; /* slightly wider */
+  background: #ffffff;
+  padding: 28px 26px;
+  border-radius: 10px;
+
+  border: 1px solid #d0d7de;
+
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 8px 24px rgba(140, 149, 159, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-card h2 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.login-card input {
+  width: 95%;
+  padding: 9px;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.login-card input:focus {
+  outline: none;
+  border-color: #3b5fc9;
+  box-shadow: 0 0 0 2px rgba(59, 95, 201, 0.15);
+}
+
+.login-card .login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #3b5fc9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+
+.login-card .login-btn:hover {
+  background: #2f4bb5;
+}
+
+.login-card .error-text {
+  color: #d93025;
+  font-size: 12px;
+  margin-top: -6px;
+}
+
+/* API ERROR BOX */
+.login-error {
+  background: #ffeaea;
+  color: #d93025;
+  padding: 8px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/*  ERRORS  */
+.error-text {
+  color: #d1242f;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.input-error {
+  border-color: #d1242f !important;
+}
+
+/* FIX FORM STRUCTURE */
+.form-grid > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* FILE INPUT ROW */
+.file-row {
+  margin-top: 15px;
+}
+
+/* BUTTON ALIGNMENT */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+/* FIX INPUT WIDTH ISSUE */
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* LOGIN BUTTON FIX */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  background: #3b5fc9;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  border: none;
+}
+
+.login-btn:hover {
+  background: #324fc0;
+}
+
+.login-card input {
+  margin-bottom: 10px;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+.login-card {
+  width: 340px;
+}
+.login-card button {
+  background: #3b5fc9 !important;
+  color: white !important;
+}
+
+.file-row input[type="file"] {
+  width: auto;
+  max-width: 500px;
+}
+
+.attachment div {
+  display: flex;
+  gap: 10px; 
+}
+
+.table-box h3 {
+  padding: 15px;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+}
+
+.form-grid.small input,
+.form-grid.small select {
+  padding: 7px;
+  font-size: 13px;
+}
+
+.file-row input[type="file"] {
+  width: auto;
+  max-width: 300px;
+}
+
+.attachment-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.success-msg {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+

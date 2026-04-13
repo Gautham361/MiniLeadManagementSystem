@@ -1,0 +1,13 @@
+# ---------- React ----------
+node_modules/
+dist/
+.env
+
+# ---------- .NET ----------
+bin/
+obj/
+.vs/
+
+# ---------- Others ----------
+*.log
+.DS_Store
